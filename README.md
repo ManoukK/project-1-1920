@@ -25,6 +25,8 @@ Mijn eigen leerdoelen zijn namelijk dat ik wil leren hoe een gebruiker in een ar
 ### Mijn concept
 Mijn concept ligt erg dicht bij mijn leerdoel. Ik wil een site maken waarbij de gebruiker kan zoeken, filteren en sorteren. De doelgroep van de case zijn kinderen en dus moet ik rekening houden met een leuke, speelse site/vormgeving zodat het ook kinderen aanspreekt. 
 
+Eerst wil ik ervoor zorgen dat je kan zoeken, filteren en sorteren binnen een bepaalde thema. Als dit werkt wil ik nog uitbereiden dat de gebruiker zelf in de hele oba data kan zoeken naar kernwoorden. 
+
 #### De hoofdpagina (tot nu toe)
 > screenshot website
 
@@ -51,6 +53,8 @@ Mijn concept ligt erg dicht bij mijn leerdoel. Ik wil een site maken waarbij de 
 
 
 ### Features
+- [ ] Zoek functie
+
 
 ### Bronnenlijst
 
