@@ -1,4 +1,4 @@
-# Een weer app voor Amsterdam 
+# Titel
 
 ### Inhoudsopgave
 * [De opdracht](#De-opdracht)
@@ -18,7 +18,6 @@
 * [Credits](#Credits)
 
 ### De opdracht 
-
 
 ### Mijn concept
 
