@@ -4,9 +4,6 @@
 * [De opdracht](#De-opdracht)
 * [Mijn concept](#Mijn-concept)
    * [De hoofdpagina](#De-hoofdpagina-(tot-nu-toe))
-* [De structuur](#De-structuur)
-   * [Actor diagram](#Actor-diagram)
-   * [Interaction diagram](#Interaction-diagram)
 * [Installatie](#Installatie)
    * [Routie](#Routie)
 * [De api en data](#De-api-en-data)
@@ -29,14 +26,6 @@ Eerst wil ik ervoor zorgen dat je kan zoeken, filteren en sorteren binnen een be
 
 #### De hoofdpagina (tot nu toe)
 > screenshot website
-
-
-### De structuur
-
-#### Actor diagram
-
-#### Interaction diagram
-
 
 ### Installatie
 
