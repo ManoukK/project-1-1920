@@ -33,18 +33,29 @@ Eerst wil ik ervoor zorgen dat je kan zoeken, filteren en sorteren binnen een be
 
 
 ### De api en data
+De api is van de oba en bevat een public en private key. Deze keys kan je aanvragen bij de oba. De api bevat de gehele collecie van de oba. Onder het kopje: De url voor de api, vertel ik hoe de url eruit ziet. 
+
 
 #### De url voor de api 
 
 #### Data die de api ophaald 
+Als je voor het eerst data ophaald, zie je dat je 20 resultaten in een array terug krijgt. In de meta kan je zien hoe veel resultaten je daadwerkelijk terug krijgt. Dit kan heel hoog oplopen. Ik raad dan ook aan om eerst met de eerst 20 aan de slag te gaan en later kan je er altijd meer toevoegen.
+
+In dit voorbeeld heb ik als query "hamster" gebruikt. Dit zijn de resultaten per item in de array. Het kan zijn dat je soms bij het ene meer auteurs hebt dan bij de ander. 
+
+![Schermafbeelding 2020-03-02 om 15 28 38](https://user-images.githubusercontent.com/45541885/75685331-b505da00-5c9a-11ea-9550-dabcadea8ae3.png)
+
+De api bevat ontzettend veel informatie per item dus je kan er veel kanten mee op. 
 
 #### Data die ik gebruik
 
 
 ### Features
-- [ ] Zoek functie
-
-
+- [ ] Zoek functie (in 1 thema)
+- [ ] Filter functie
+- [ ] Sorteer functie
+- [ ] Speelse, leuke uitstaring
+ 
 ### Bronnenlijst
 
 ### Credits
