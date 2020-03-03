@@ -30,6 +30,9 @@ Eerst wil ik ervoor zorgen dat je kan zoeken, filteren en sorteren binnen een be
 ### Installatie
 
 #### Routie 
+Voor de navigatie maak ik gebruik van Routie. Als je dat ook wilt gebruiken zet je de script boven aan in de body van je html. Daarvoor moet je nog wel het js bestandje van routie downloaden en in een libary mapje zetten. Dit bestandje kan je in mijn project vinden onder docs - libary - routie.js
+
+Hier vind je de volledinge documentatie over routie: http://projects.jga.me/routie/
 
 
 ### De api en data
@@ -39,7 +42,8 @@ De api is van de oba en bevat een public en private key. Deze keys kan je aanvra
 #### De url voor de api 
 
 #### Data die de api ophaald 
-Als je voor het eerst data ophaald, zie je dat je 20 resultaten in een array terug krijgt. In de meta kan je zien hoe veel resultaten je daadwerkelijk terug krijgt. Dit kan heel hoog oplopen. Ik raad dan ook aan om eerst met de eerst 20 aan de slag te gaan en later kan je er altijd meer toevoegen.
+Als je data ophaald, zie je dat je 20 resultaten in een array terug krijgt, dit is standaard voor de api. In de meta kan je zien hoe veel resultaten je daadwerkelijk terug krijgt. Dit kan heel hoog oplopen. De api werkt met pagina's in plaats van een hele lange array. 
+Met ?curpage=(nummer) kan je door de pagina's gaan en zo dus ook pagina's op je html maken. Ik heb dit zelf niet toegepast omdat ik 20 resultaten voldoende vond.
 
 In dit voorbeeld heb ik als query "hamster" gebruikt. Dit zijn de resultaten per item in de array. Het kan zijn dat je soms bij het ene meer auteurs hebt dan bij de ander. 
 
