@@ -13,7 +13,7 @@
 * [Features](#Features)
 * [Bronnenlijst](#Bronnenlijst)
 * [Credits](#Credits)
-* [Credits](#Aanvulling-op-WAFS)
+* [Aanvulling op WAFS](#Aanvulling-op-WAFS)
 
 ### De opdracht 
 Je hebt keuze uit 3 verschillende cases. Ik heb gekozen voor case 2. Dit is de case waarbij je een hulp functie gaat maken om spreekbeurden voor kinderen makkelijker te maken. Ik heb deze case gekozen omdat dit het dichtst bij mijn persoonlijke leerdoelen ligt. 
