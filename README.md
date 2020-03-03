@@ -13,6 +13,7 @@
 * [Features](#Features)
 * [Bronnenlijst](#Bronnenlijst)
 * [Credits](#Credits)
+* [Credits](#Aanvulling-op-WAFS)
 
 ### De opdracht 
 Je hebt keuze uit 3 verschillende cases. Ik heb gekozen voor case 2. Dit is de case waarbij je een hulp functie gaat maken om spreekbeurden voor kinderen makkelijker te maken. Ik heb deze case gekozen omdat dit het dichtst bij mijn persoonlijke leerdoelen ligt. 
@@ -71,14 +72,68 @@ In dit voorbeeld heb ik als query "hamster" gebruikt. Dit zijn de resultaten per
 De api bevat ontzettend veel informatie per item dus je kan er veel kanten mee op. 
 
 #### Data die ik gebruik
+De oorspronkelijke array van de api heb ik bewust niet opgeschoond. Ik wilde de data zo laten dat ik later in het project altijd nog terug kon op alle data binnen de api. Dit wilde ik vooral omdat ik nog niet wist welke data ik waar wilde gebruiken. 
 
+Op deze manier laad ik nu html content in via javascript.
+
+```js
+export function mainNode(results) {
+    console.log(results)
+    results.map(function(result, index) {
+        //https://javascript.info/ifelse uitleg over "result = condition ? value1 : value2;"
+        // dit is een verkorte versie van de if else statement. 
+        // als de result.summaries een waarde heeft moet het deze waarde laten zien: result.summaries[0]
+        // als het geen waarde bevat moet het de melding hebben 'Geen samenvatting'
+        const htmlMainPage = `
+                <article id="articleMainPage">
+                    <h2>${result.titles[0]}</h2>  
+                    <img src="${result.coverimages ? result.coverimages[1] : 'Geen samenvatting'}">
+                    <p>${result.authors ? result.authors : 'Geen informatie'}</p>
+                    <p>${result.formats ? result.formats[0].text : 'Geen informatie'}</p>
+                    <p>${result.languages ? result.languages : 'Geen informatie'}</p>
+                    <p>${result.description ? result.description[0] : 'Geen informatie'}</p>
+                    <p>${result.year ? result.year : 'Geen informatie'}</p> 
+                    <a href="#${result.isbn}"> Meer informatie</a>    
+                </article>
+            `;
+        const main = document.querySelector('div');
+        main.insertAdjacentHTML('beforeend', htmlMainPage);
+    });
+```
 
 ### Features
-- [ ] Zoek functie (in 1 thema)
+- [x] Zoek functie
 - [ ] Filter functie
 - [ ] Sorteer functie
-- [ ] Speelse, leuke uitstaring
+- [x] Speelse, leuke uitstaring
  
 ### Bronnenlijst
 
 ### Credits
+
+### Aanvulling op WAFS
+Voor wafs had ik nog een kleine aanvulling en dat ging over de routie. Deze had ik toen niet dynamisch aangemaakt, dat kon ook omdat ik maar 3 verschillende articles had. Nu moet ik het wel dynamisch aanmaken omdat mijn hele content dynamisch is. Dat heb ik gedaan op deze manier: 
+
+Als er geen path of hash zit word de mainNode function uitgevoerd. Als er wel een hash in de url zit word de detailNode uitgevoerd. Dit word gedaan bij elk id in de url. De id heb ik gezet op het isbn nummer van het boek wat erbij hoort. Zo kan ik makkelijk de id omzetten naar de query en zo zoekt de api specifiek naar dat boek waardoor ik dynamisch een detail pagina kan renderen. 
+
+```js
+function router(){
+    routie ({
+        '': function() {
+            const query = localStorage.getItem("searchValue");
+            getData(query)
+                .then(function(results) {
+                    mainNode(results)
+                })
+        },
+        ':id': function(id) {
+            const query = id;
+            getData(query)
+                .then(function(results) {
+                    detailNode(results)
+                })
+
+        },
+    });
+};
+```
