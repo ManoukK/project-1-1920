@@ -35,12 +35,12 @@ Voor de navigatie maak ik gebruik van Routie. Als je dat ook wilt gebruiken zet 
 Hier vind je de volledinge documentatie over routie: http://projects.jga.me/routie/
 
 ### De api en data
-De api is van de oba en bevat een public en private key. Deze keys kan je aanvragen bij de oba. De api bevat de gehele collecie van de oba. Onder het kopje: De url voor de api, vertel ik hoe de url eruit ziet. 
+De api is van de oba en bevat een public key. Ik weet niet zeker of ik deze key zomaar vrij kan geven op het internet, daarom laat ik die voorlopig niet zien. De api bevat de gehele collecie van de oba. Onder het kopje: De url voor de api, vertel ik hoe de url eruit ziet. 
 
 Meer informatie over de api kan je hier vinden: https://zoeken.oba.nl/api/v1/?i_public=9a9b148ab8abe117aa908&i_secret=1a3b58ea286b7117a29af#/details
 
 #### De url voor de api 
-Voor de url heb je, zoals ik hierboven ook al aangaf, een public en een private key nodig. Deze kan je aanvragen bij de oba. Deze codes laat ik niet in het voorbeeld zien maar de rest wel. 
+Voor de url heb je, zoals ik hierboven ook al aangaf, een public key nodig. Deze code laat ik niet in het voorbeeld zien maar de rest wel. 
 
 De cors heb je nodig om in de browser cors errors te voorkomen. De cors zorgt er wel voor dat je (maar) 200 requests kan sturen in 1 uur. Dit kan nadelig werken. 
 
@@ -53,16 +53,12 @@ const cors = 'https://cors-anywhere.herokuapp.com/';
 const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
 const query = 'hamster';
 const publicKey = '...';
-const privateKey = '...';
-
 const detail = 'Default';
 
 const url = `${cors}${endpoint}${query}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
-
-const config = {
-   Authorization: `Bearer ${privateKey}`
-};
 ```
+
+Je kan met de url nog veel meer kanten mee op. Dit kan je lezen in de documentatie over deze api: https://zoeken.oba.nl/api/v1/?i_public=9a9b148ab8abe117aa908&i_secret=1a3b58ea286b7117a29af#/details
 
 #### Data die de api ophaald 
 Als je data ophaald, zie je dat je 20 resultaten in een array terug krijgt, dit is standaard voor de api. In de meta kan je zien hoe veel resultaten je daadwerkelijk terug krijgt. Dit kan heel hoog oplopen. De api werkt met pagina's in plaats van een hele lange array. 
