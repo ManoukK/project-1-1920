@@ -30,16 +30,39 @@ Eerst wil ik ervoor zorgen dat je kan zoeken, filteren en sorteren binnen een be
 ### Installatie
 
 #### Routie 
-Voor de navigatie maak ik gebruik van Routie. Als je dat ook wilt gebruiken zet je de script boven aan in de body van je html. Daarvoor moet je nog wel het js bestandje van routie downloaden en in een libary mapje zetten. Dit bestandje kan je in mijn project vinden onder docs - libary - routie.js
+Voor de navigatie maak ik gebruik van Routie. Als je dat ook wilt gebruiken zet je de script boven aan in de body van je html. Daarvoor moet je nog wel het js bestandje van routie downloaden en in een libary mapje zetten. Dit bestandje kan je in mijn project vinden onder docs - libary - routie.js. Op deze manier kan je nu een html pagina maken waarbij je klikt tussen componenten in plaats van html pagina's. 
 
 Hier vind je de volledinge documentatie over routie: http://projects.jga.me/routie/
-
 
 ### De api en data
 De api is van de oba en bevat een public en private key. Deze keys kan je aanvragen bij de oba. De api bevat de gehele collecie van de oba. Onder het kopje: De url voor de api, vertel ik hoe de url eruit ziet. 
 
+Meer informatie over de api kan je hier vinden: https://zoeken.oba.nl/api/v1/?i_public=9a9b148ab8abe117aa908&i_secret=1a3b58ea286b7117a29af#/details
 
 #### De url voor de api 
+Voor de url heb je, zoals ik hierboven ook al aangaf, een public en een private key nodig. Deze kan je aanvragen bij de oba. Deze codes laat ik niet in het voorbeeld zien maar de rest wel. 
+
+De cors heb je nodig om in de browser cors errors te voorkomen. De cors zorgt er wel voor dat je (maar) 200 requests kan sturen in 1 uur. Dit kan nadelig werken. 
+
+De query is je zoekterm binnen de api. In dit voorbeeld word alles opgehaald wat te maken heeft met hamster.
+
+Bij detail kan je verschillende settings meegeven. Ik heb gekozen voor default. Deze geeft genoeg informatie mee om op de website te zetten. De oba zelf gebruikt deze setting ook voor op hun website. Je hebt ook nog Minimum, Basic, Extended en Librarian. 
+
+```js
+const cors = 'https://cors-anywhere.herokuapp.com/';
+const endpoint = 'https://zoeken.oba.nl/api/v1/search/?q=';
+const query = 'hamster';
+const publicKey = '...';
+const privateKey = '...';
+
+const detail = 'Default';
+
+const url = `${cors}${endpoint}${query}&authorization=${publicKey}&detaillevel=${detail}&output=json`;
+
+const config = {
+   Authorization: `Bearer ${privateKey}`
+};
+```
 
 #### Data die de api ophaald 
 Als je data ophaald, zie je dat je 20 resultaten in een array terug krijgt, dit is standaard voor de api. In de meta kan je zien hoe veel resultaten je daadwerkelijk terug krijgt. Dit kan heel hoog oplopen. De api werkt met pagina's in plaats van een hele lange array. 
