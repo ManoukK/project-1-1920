@@ -17,13 +17,13 @@ body {
 h1 {
   text-align: center;
   font-family: "Arial Black", Gadget, sans-serif;
-  font-size: 3em;
+  /* font-size: 3em; */
   margin-left: 0.5em;
   color: var(--yellow);
   text-shadow: 3px 3px var(--yellowShadow);
 }
 
-div {
+#boekenlijstSection {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -134,3 +134,30 @@ header {
 nav {
   text-align: center;
 }
+
+header form > fieldset:first-of-type{
+  /* align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute; */
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  border-color: var(--yellow);
+  border-style: solid;
+  box-shadow: 10px 10px var(--yellowShadow);
+  /* padding-left: 1em; */
+}
+
+
+header form > legend:first-of-type > * {
+  /* position: relative; */
+}
+
+span {
+  display: block;
+}
+
+/* #articleMainPage {
+  visibility: hidden;
+} */

@@ -13,11 +13,33 @@
   <script src="libary/routie.js"></script>
   
   <header>
-    <h1>Zoek jouw boek</h1>
-    <nav id="search"></nav>
+    <p>Je eigen werkstuk maken is super leuk! Om een goede werkstuk te hebben moet je wel een goede basis hebben. Wij helpen jou hierbij.
+      Door de stappen te volgen op deze website kan je snel beginnen met het maken van jouw eigen werkstuk. 
+    </p>
+
+    <p>Je kan deze website uitprinten en met jouw gekozen boeken naar de OBA gaan. Zo kan je snel jouw boeken vinden zonder dat je het vergeet!
+      Jouw uitgeprintte blaadje dient gelijk als spiekbriefje want je hebt gelijk jouw vragen en bronnenlijst bij de hand.
+    </p>
+    <form>
+      <h3>Heb je al een onderwerp?</h3>
+      <input type="radio" id="yes" name="topicQuestion">
+      <label for="yes" name="topicQuestion">Ja</label>
+      <input type="radio" id="no" name="topicQuestion">
+      <label for="no" name="topicQuestion">Nee</label>
+      <fieldset id="search"></fieldset>
+    </form>
+    <!-- <nav id="search"></nav> -->
   </header>
   <main>
-    <div></div>
+    <section>
+      <section id="vragenlijstSection">
+          <fieldset id="aksQuestion"></fieldset>
+          <h3>De boeken die jou gaan helpen bij jouw werkstuk</h3>
+          <p></p>
+      </section>
+      <section id="boekenlijstSection"></section>
+      <section id="bronnenlijstSection"></section>
+  </section>
   </main>
   <script type="module" src="js/app.js"></script>
 </body>
