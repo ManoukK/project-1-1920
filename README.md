@@ -29,6 +29,7 @@ Eerst wil ik ervoor zorgen dat je kan zoeken, filteren en sorteren binnen een be
 > screenshot website
 
 ### Installatie
+Om Dit project te installeren kan je deze repository downloaden of forken bovenaan de website. Verder heb je nog wel de api nodig van de oba (lees: De api en data) en moet je nog routie installeren. Zie hieronder.
 
 #### Routie 
 Voor de navigatie maak ik gebruik van Routie. Als je dat ook wilt gebruiken zet je de script boven aan in de body van je html. Daarvoor moet je nog wel het js bestandje van routie downloaden en in een libary mapje zetten. Dit bestandje kan je in mijn project vinden onder docs - libary - routie.js. Op deze manier kan je nu een html pagina maken waarbij je klikt tussen componenten in plaats van html pagina's. 
@@ -106,6 +107,9 @@ export function mainNode(results) {
 - [ ] Filter functie
 - [ ] Sorteer functie
 - [x] Speelse, leuke uitstaring
+- [ ] Als een gebruiker van de detail weer naar de hoofdpagina gaat moeten de gedelete items weg blijven
+- [ ] Print optie voor de website
+- [ ] Deleten per item en niet de bovenste item
  
 ### Bronnenlijst
 
