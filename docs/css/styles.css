@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --yellow: #ffce54;
   --yellowShadow: #f68b42;
   --blue: #4fc1e9;
@@ -18,20 +18,20 @@ h1 {
   text-align: center;
   font-family: "Arial Black", Gadget, sans-serif;
   /* font-size: 3em; */
-  margin-left: 0.5em;
+  /* margin-left: 0.5em;
   color: var(--yellow);
   text-shadow: 3px 3px var(--yellowShadow);
-}
+} */
 
-#boekenlijstSection {
+/* #boekenlijstSection {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; */
   /* align-items: flex-start; */
   /* align-content: stretch; */
-}
+/* } */
 
-article {
+/* article {
   background-color: var(--white);
   border-style: solid;
   border-color: var(--blue);
@@ -73,13 +73,14 @@ article {
 
 nav input {
   width: 20em;
-}
+} */
 
-#articleDetailPage {
+/* #articleDetailPage {
   width: 80%;
   padding: 0em 1em 1em 1em;
-}
+} */
 
+/* 
 #articleDetailPage h2{
   font-size: 2.5em;
 }
@@ -107,9 +108,9 @@ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
-}
+} */
 
-tr:nth-child(even) {
+/* tr:nth-child(even) {
   background-color: #dddddd;
 }
 
@@ -129,35 +130,164 @@ header {
   margin: -1em -1em 1em -1em;
   padding: 1em;
   /* width: 100vw; */
-}
+/* }
 
 nav {
   text-align: center;
-}
+}  */
 
-header form > fieldset:first-of-type{
+/* header form > fieldset:first-of-type{ */
   /* align-content: center;
   margin-left: auto;
   margin-right: auto;
   position: absolute; */
-  margin-left: auto;
+  /* margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
   border-color: var(--yellow);
   border-style: solid;
-  box-shadow: 10px 10px var(--yellowShadow);
+  box-shadow: 10px 10px var(--yellowShadow); */
   /* padding-left: 1em; */
-}
+/* } */
 
 
-header form > legend:first-of-type > * {
+/* header form > legend:first-of-type > * {
   /* position: relative; */
-}
+/* }  */
 
-span {
+/* span {
   display: block;
-}
+} */
 
 /* #articleMainPage {
   visibility: hidden;
-} */
+} */ 
+
+:root {
+  --blue: #67ebfa;
+  --blueShade: #d1f9fd;
+  --purple: #ce97fb;
+  --pink: #f6a5eb;
+  --yellow: #fddf7e;
+  --orange: #faa99d;
+  --shadowGrey: #E0E0E0;
+  --white: white;
+  --black: black;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--blueShade);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #67ebfa;
+}
+
+body {
+  background-color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  margin: 1em auto;
+  width: 17em;
+}
+
+h1:before {
+  background-color: var(--blue);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(1);
+}
+
+header > section:first-of-type {
+  width: 40%;
+  display: block;
+  margin: 5em auto 7em auto;
+  background-color: var(--pink);
+  padding: 2em;
+  box-shadow: 10px 10px 10px var(--shadowGrey);
+  transform: rotate(-4deg);
+}
+
+header > section:first-of-type > img {
+  position: absolute;
+  width: 5em;
+  margin: -5em 30% 0em 35%;
+}
+
+header > form h3 {
+  position: relative;
+  text-align: center;
+  margin: 2em auto;
+  width: 17em;
+}
+
+header > form h3:before {
+  background-color: var(--purple);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(1);
+}
+
+header > form > fieldset:first-of-type input {
+  visibility: hidden;
+}
+
+header > form fieldset {
+  justify-content: center;
+  text-align: center;
+}
+
+header > form label {
+  position: relative;
+  padding: 1em 2em;
+  text-align: center;
+  /* background-color: var(--purple); */
+  background: linear-gradient(to right, var(--white) 50%, var(--yellow) 50%);
+  background-size: 200% 100%;
+  background-position:left bottom;
+  transition:all 2s ease;
+}
+
+header > form label:before {
+  background-color: var(--yellow);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0px;
+  left: 0;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+header > form label:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+header > form input:checked + label{
+  /* background-color: var(--orange); */
+  font-weight: 900;
+  background-position:right bottom;
+}
+
+fieldset {
+  border: none;
+}

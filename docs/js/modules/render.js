@@ -3,7 +3,7 @@ mainTitleNode();
 function mainTitleNode() {
     const htmlMainTitle = `
 
-        <h1>Maak je eigen werkstuk over ${localStorage.getItem("searchValue") ? localStorage.getItem("searchValue") : '...'}</h1>
+        <h1>Een werkstuk over ${localStorage.getItem("searchValue") ? localStorage.getItem("searchValue") : '...'}</h1>
     `;
     const main = document.querySelector('header');
     main.insertAdjacentHTML('afterbegin', htmlMainTitle);
@@ -162,8 +162,10 @@ export function detailNode(results) {
                     <a href=""> Terug</a> 
                 </article>
             `;
-        const main = document.querySelector('section');
+        const main = document.getElementById('boekenlijstSection');
         while (main.firstChild) main.removeChild(main.firstChild);
+        const sourceList = document.getElementById('bronnenlijstSection');
+        while (sourceList.firstChild) sourceList.removeChild(sourceList.firstChild);
         main.insertAdjacentHTML('beforeend', htmlDetailPage);
     });
 };
