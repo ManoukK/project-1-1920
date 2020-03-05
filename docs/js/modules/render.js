@@ -4,7 +4,7 @@ function mainTitleNode() {
     const htmlMainTitle = `
         <h1>Een werkstuk over ${localStorage.getItem("searchValue") ? localStorage.getItem("searchValue") : '...'}</h1>
         <p>EHBW - Eerste Hulp Bij Werkstukken</p>
-        <p>Al onderzoek gedaan naar jouw onderwer maak dan <a href="https://nlvo.github.io/project-1-1920/dist/#werkstuk">hier</a> jouw werkstuk</p>
+        <p>Al onderzoek gedaan naar jouw onderwerp? Maak dan <a href="https://nlvo.github.io/project-1-1920/dist/#werkstuk">hier</a> jouw werkstuk</p>
 
     `;
     const main = document.querySelector('header');
