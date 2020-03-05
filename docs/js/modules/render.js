@@ -20,13 +20,39 @@ export function navNode() {
 
     const main = document.getElementById('search');
     main.insertAdjacentHTML('afterbegin', htmlNavigation);
+
+    const sourceList = document.getElementById('topics');
+    while (sourceList.firstChild) sourceList.removeChild(sourceList.firstChild);
+};
+
+export function exampleTopics() {
+    const htmlNavigation = `
+            <p>Wat goed! Wat is jouw onderwerp?</p>
+            <button type="submit" id="searchbarSubmit" value="ruimtevaart">Ruimtevaart</button>
+            <button type="submit" id="searchbarSubmit" value="achtbanen">Achtbanen</button>
+            <button type="submit" id="searchbarSubmit" value="fossielen">Fossielen</button>
+            <button type="submit" id="searchbarSubmit" value="koraalrif">Koraalrif</button>
+            <button type="submit" id="searchbarSubmit" value="zintuigen">Zintuigen</button>
+            <button type="submit" id="searchbarSubmit" value="allergie">Allergie</button>
+            <button type="submit" id="searchbarSubmit" value="ambulance">Ambulance</button>
+            <button type="submit" id="searchbarSubmit" value="gezonde voeding">Gezonde voeding</button>
+            <button type="submit" id="searchbarSubmit" value="Kastelen">Kastelen</button>
+            <button type="submit" id="searchbarSubmit" value="vikingen">Vikingen</button>
+            <button type="submit" id="searchbarSubmit" value="ramadan">Ramadan</button>
+    `;
+
+    const main = document.getElementById('topics');
+    main.insertAdjacentHTML('afterbegin', htmlNavigation);
+
+    const sourceList = document.getElementById('search');
+    while (sourceList.firstChild) sourceList.removeChild(sourceList.firstChild);
 };
 
 export function mainNode(results) {
     const htmlQuestion = `
         <fieldset id="questionBlock">
-            <img src="/img/plakband.png" alt="plakband">
-            <img src="/img/plakband.png" alt="plakband">
+            <img src="../../img/plakband.png" alt="plakband">
+            <img src="../../img/plakband.png" alt="plakband">
             <h3>Wat wil je weten over jouw onderwerp?</h3>
             <p>Vragen voor jouw werkstuk zijn belangrijk. Dit zorgt ervoor dat jij tijdens het schrijven weet waar jij het over wilt hebben.
             Zo kan jij een goed verhaal vertellen over jouw onderwerp.</p>
@@ -64,10 +90,10 @@ export function mainNode(results) {
         const htmlMainPage = `
                 <article id="articleMainPage${index}">
                     <div>
-                    <div>
-                        <button type="button" class="test"></button>
-                        <label>Verwijder</label>
-                    </div>
+                        <span>
+                            <button type="button" class="test"></button>
+                            <label>Verwijder</label>
+                        </span>
                     <h2>${result.titles[0]}</h2>  
                     <img src="${result.coverimages ? result.coverimages[1] : 'Geen foto'}">
                     <p>${result.summaries ? result.summaries[0] : 'Geen samenvatting'}</p>
@@ -132,6 +158,7 @@ export function detailNode(results) {
         // als de result.summaries een waarde heeft moet het deze waarde laten zien: result.summaries[0]
         // als het geen waarde bevat moet het de melding hebben 'Geen samenvatting'
         const htmlDetailPage = `
+                <h1>Een werkstuk over ${localStorage.getItem("searchValue") ? localStorage.getItem("searchValue") : '...'}</h1>
                 <article id="articleDetailPage">
                     <h2>${result.titles[0]}</h2>  
                     <img src="${result.coverimages ? result.coverimages[1] : 'Geen foto'}">

@@ -3,6 +3,7 @@ import { getData } from './modules/api.js';
 import { mainNode } from './modules/render.js';
 import { detailNode } from './modules/render.js';
 import { navNode } from './modules/render.js';
+import { exampleTopics } from './modules/render.js';
 // import { questionNode } from './modules/render.js';
 
 // document.getElementById('removeBook').addEventListener("click", function(){
@@ -10,7 +11,6 @@ import { navNode } from './modules/render.js';
 // });
 
 document.getElementById('yes').addEventListener("click", function(){
-    console.log("je hebt op ja geklikt")
     navNode();
     document.getElementById('searchbarSubmit').addEventListener("click", function(){
         const searchValue = document.getElementById('searchbar').value;
@@ -19,7 +19,7 @@ document.getElementById('yes').addEventListener("click", function(){
 });
 
 document.getElementById('no').addEventListener("click", function(){
-    console.log("je hebt op nee geklikt")
+    exampleTopics();
 });
 
 router()
