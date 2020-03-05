@@ -10,8 +10,8 @@ export async function getData(query){
     const onlyBooks = 'type(book)';
 
     //deze url aanzetten als ik ga deployen
-    //const url = `${endpoint}${query}&authorization=${publicKey}&detaillevel=${detail}&p=${audience}&output=json`;
     const url = `${endpoint}${query}&authorization=${publicKey}&detaillevel=${detail}&p=${audience}&output=json&refine=true&facet=${onlyBooks}`;
+    // const url = `${endpoint}${query}&authorization=${publicKey}&detaillevel=${detail}&p=${audience}&output=json&refine=true&facet=${onlyBooks}`;
 
     const data = await fetch(url)
         .then(function(response) {
