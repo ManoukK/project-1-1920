@@ -500,6 +500,8 @@ td, th {
 
   padding-left: 0.1em;
   padding-right: 0.1em;
+  text-decoration: none;
+  color: var(--black);
 }
 #siteExplain > p:nth-of-type(2) > a:before {
   background-color: var(--yellow);
@@ -547,8 +549,12 @@ td, th {
   }
 
   #vragenlijstSection {
-    page-break-before: always;
+    page-break-after: always;
   } 
+
+  #vragenlijstSection > div {
+    display: none;
+  }
 
   #boekenlijstSection > article div > span {
     display: none;
@@ -556,5 +562,10 @@ td, th {
   #boekenlijstSection > article a {
     display: none;
   }
+
+  #bronnenlijst {
+    margin-top: 2em;
+    page-break-before: always;
+  } 
 
 }
