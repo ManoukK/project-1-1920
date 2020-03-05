@@ -1,4 +1,4 @@
-# Titel
+# EHBW - Eerste Hulp Bij Werkstukken
 
 ### Inhoudsopgave
 * [De opdracht](#De-opdracht)
