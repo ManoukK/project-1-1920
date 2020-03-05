@@ -6,9 +6,9 @@ import { navNode } from './modules/render.js';
 import { exampleTopics } from './modules/render.js';
 // import { questionNode } from './modules/render.js';
 
-// document.getElementById('removeBook').addEventListener("click", function(){
-//     console.log("hi");
-// });
+document.getElementById('printOptie').addEventListener("click", function(){
+    window.print();
+});
 
 document.getElementById('yes').addEventListener("click", function(){
     navNode();
