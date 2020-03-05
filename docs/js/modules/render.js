@@ -55,8 +55,8 @@ export function exampleTopics() {
 export function mainNode(results) {
     const htmlQuestion = `
         <fieldset id="questionBlock">
-            <img src="https://github.com/ManoukK/project-1-1920/blob/master/docs/img/plakband.png" alt="plakband">
-            <img src="https://github.com/ManoukK/project-1-1920/blob/master/docs/img/plakband.png" alt="plakband">
+            <img src="img/plakband.png" alt="plakband">
+            <img src="img/plakband.png" alt="plakband">
             <h3>Wat wil je weten over jouw onderwerp?</h3>
             <p>Vragen voor jouw werkstuk zijn belangrijk. Dit zorgt ervoor dat jij tijdens het schrijven weet waar jij het over wilt hebben.
             Zo kan jij een goed verhaal vertellen over jouw onderwerp.</p>
