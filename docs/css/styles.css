@@ -167,7 +167,7 @@ input[type="text"] {
 }
 
 button {
-  background-image: url(../img/punaise.png);
+  background-image: url(../img/happyFace.png);
   background-size: cover;
   height: 3.5em;  
   width: 3.5em;
@@ -176,10 +176,12 @@ button {
   outline: none;
   border: none;
   margin-left: 1em;
+  background-color: transparent;
 }
 
 button:hover {
-  background-image: url(../img/plakband.png);
+  background-image: url(../img/shockingFace.png);
+  background-color: transparent;
 }
 
 #questionBlock > img {
@@ -291,16 +293,20 @@ button:hover {
   padding: 0.5em 1.5em;
 }
 
+#boekenlijstSection > article div > span:hover{
+  background-color: var(--orangeLight);
+}
+
 #boekenlijstSection > article div > span button {
-  margin-top: -1.2em;
+  margin-top: -1em;
   left: -3.5em;
   background-color: transparent;
   /* margin-left: 1.5em; */
 }
 
 #boekenlijstSection > article div > span:hover button {
-  margin-top: -0.9em;
-  background-image: url(../img/brush_orange.svg);
+  background-image: url(../img/shockingFace.png);
+  background-color: transparent;
 }
 
 table {
@@ -423,6 +429,7 @@ td, th {
   background-repeat: no-repeat;
   background-position: bottom center;
   margin-top: 1em;
+  background-color: var(--white);
 }
 
 #topics button:nth-of-type(1) {
@@ -524,7 +531,7 @@ td, th {
   width: 5em;
   margin: -1em 35% 0em 45%;
   z-index: 2;
-
+  background-color: transparent;
 }
 
 #bronnenlijstSection > p {
