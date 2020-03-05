@@ -124,7 +124,7 @@ export function mainNode(results) {
 
     const htmlSourceList = `
         <h3>De bronnenlijst voor in jouw werkstuk</h3>
-        <img src="https://github.com/ManoukK/project-1-1920/blob/master/docs/img/punaise.png" alt="punaise">
+        <img src="img/punaise.png" alt="punaise">
         <p>Voor een werkstuk is een bronnenlijst heel belangrijk! Zo kan jouw juf of meester zien waar jij alle informatie hebt gevonden
         Het is handig om vanaf het begin al op te schrijven welke bronnen jij hebt gebruikt. Zo voorkom je dat je later alles moet terug vinden. 
         <br><br> Hieronder vind je alle boeken die de oba voor jou heeft geselecteerd. Print de website uit en kruis de boeken af die jij hebt gebruikt. Deze bronnen kan je 
