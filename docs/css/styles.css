@@ -163,17 +163,37 @@ nav {
   visibility: hidden;
 } */ 
 
-:root {
+/* :root {
   --blue: #67ebfa;
   --blueShade: #d1f9fd;
   --purple: #ce97fb;
   --pink: #f6a5eb;
   --yellow: #fddf7e;
   --orange: #faa99d;
+  --orangeVeryLight: #feedeb;
+  --orangeLight: #fddcd7;
   --shadowGrey: #E0E0E0;
   --white: white;
   --black: black;
+} */
+
+:root {
+  --blue: rgba(103,235,250,1);
+  --blueShade: rgba(209, 249, 253, 1);
+  --purple: rgba(206, 151, 251, 1);
+  --pink: rgba(246,165,235,1);
+  --pinkveryLight: rgba(254, 246, 253, 1);
+  --yellow: rgba(253, 223, 126, 1);
+  --yellowVeryLight: rgba(254, 242, 203, 1);
+  --orange: rgba(250, 169, 157, 1);
+  --orangeVeryLight: rgba(254, 237, 235, 1);
+  --orangeLight: rgba(253, 220, 215, 1);
+  --shadowGrey: rgba(224, 224, 224, 1);
+  --white: white;
+  --black: black;
 }
+
+
 
 ::-webkit-scrollbar {
   width: 15px;
@@ -196,11 +216,30 @@ h1 {
   position: relative;
   text-align: center;
   margin: 1em auto;
-  width: 17em;
+  width: 80%;
 }
 
 h1:before {
   background-color: var(--blue);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(1);
+}
+
+h3 {
+  position: relative;
+  text-align: center;
+  margin: 0em auto;
+  width: 60%;
+  margin-bottom: 3em;
+}
+
+h3:before {
+  background-color: var(--purple);
   content: "";
   position: absolute;
   width: 100%;
@@ -224,24 +263,6 @@ header > section:first-of-type > img {
   position: absolute;
   width: 5em;
   margin: -5em 30% 0em 35%;
-}
-
-header > form h3 {
-  position: relative;
-  text-align: center;
-  margin: 2em auto;
-  width: 17em;
-}
-
-header > form h3:before {
-  background-color: var(--purple);
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  bottom: -5px;
-  left: 0;
-  transform: scaleX(1);
 }
 
 header > form > fieldset:first-of-type input {
@@ -283,11 +304,241 @@ header > form label:hover:before {
 }
 
 header > form input:checked + label{
-  /* background-color: var(--orange); */
   font-weight: 900;
   background-position:right bottom;
 }
 
 fieldset {
   border: none;
+}
+
+#questionBlock {
+  background-color: #F8F8F8;
+  padding: 2em;
+  width: 50%;
+  display: block;
+  margin: 5em auto 7em auto;
+  box-shadow: 10px 10px 10px var(--shadowGrey);
+  background: linear-gradient(
+    to bottom,
+    var(--blue) 5%,
+    var(--white) 0%);
+  background-size: 100% 20px;
+}
+
+#questionBlock > h3 {
+  margin-top: -2em;
+}
+
+input[type="text"] {
+  font-size: 1em;
+  background-color: var(--orangeVeryLight);
+  width: 20em;
+  border: none;
+  border-bottom-style: solid;
+  border-color: var(--orange);
+  padding: 0.5em 1em;
+}
+
+[type="text"]:focus-within {
+  color: black;
+  background-color: var(--orangeLight);
+  outline: none;
+}
+
+button {
+  background-image: url(/img/punaise.png);
+  background-size: cover;
+  height: 3.5em;  
+  width: 3.5em;
+  background-position: center;
+  position: absolute;
+  outline: none;
+  border: none;
+  margin-left: 1em;
+}
+
+button:hover {
+  background-image: url(/img/plakband.png);
+}
+
+#questionBlock > img {
+  width: 7em;
+  margin-top: -4.5em;
+}
+
+#questionBlock > img:first-of-type {
+  transform: scaleX(-1);
+  margin-left: -5em;
+}
+
+#questionBlock > img:nth-of-type(2) {
+  float: right;
+  margin-right: -5em;
+}
+
+#questionBlock > p {
+  margin: 2em 2em 2em 4em;
+}
+
+#questionBlock div {
+  text-align: center;
+}
+
+#search {
+  margin-top: 1.5em;
+}
+
+#boekenlijstSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#boekenlijstSection > article {
+  position: relative;
+  background-color: var(--white);
+  border-style: solid;
+  border-color: var(--blue);
+  border-width: 0.5em;
+  box-shadow: 10px 10px var(--blueShadow);
+  margin: 1em;
+  padding: 0.5em;
+  width: 25em;
+}
+
+#boekenlijstSection > article h2{
+  margin-top: 1em;
+  margin-left: 0.7em;
+}
+
+
+#boekenlijstSection > article img{
+  float: right;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0em;
+  margin-bottom: 5em;
+  background-color: #F0F0F0;
+  width: 10em;
+}
+
+#boekenlijstSection > article p{
+  margin-left: 1em;
+  margin-top: 0em;
+}
+
+#boekenlijstSection > article > div {
+  margin-bottom: 6em;
+}
+
+
+#boekenlijstSection > article a{
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  margin-top: 2em;
+  color: var(--black);
+  text-decoration: none;
+  background-color: var(--yellowVeryLight);
+  padding: 0.5em 1em;
+}
+
+#boekenlijstSection > article a:before{
+  background-color: var(--yellow);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -4px;
+  left: 0;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#boekenlijstSection > article a:hover:before{
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+#boekenlijstSection > article div > div{
+  position: absolute;
+  background-color: var(--orangeVeryLight);
+  bottom: 1em;
+  left: 2.5em;
+  /* padding: 0.2em 2em; */
+  padding: 0.5em 1.5em;
+}
+
+#boekenlijstSection > article div > div button {
+  margin-top: -1.2em;
+  left: -3.5em;
+  background-color: transparent;
+  /* margin-left: 1.5em; */
+}
+
+#boekenlijstSection > article div > div:hover button {
+  margin-top: -0.9em;
+  background-image: url(/img/brush_orange.svg);
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+#bronnenlijstSection > table tbody:nth-of-type(even) {
+  /* background-color: rgb(248,248,248); */
+  background-color: var(--pinkveryLight);
+}
+
+#bronnenlijstSection {
+  margin-top: 6em;
+}
+
+#boekenlijstSection > #articleDetailPage {
+  width: 80%;
+}
+
+#boekenlijstSection > #articleDetailPage img {
+  margin-right: 5%;
+  margin-bottom: 1em;
+}
+
+#boekenlijstSection > #articleDetailPage p {
+  max-width: 30em;
+  margin-left: 3em;
+  margin-bottom: 2em;
+}
+
+#boekenlijstSection > #articleDetailPage h2 {
+  max-width: 30em;
+  margin-left: 2em;
+}
+
+#boekenlijstSection > #articleDetailPage table {
+  min-width: 20em;
+  max-width: 70%;
+  margin-left: 3em;
+  margin-right: 1em;
+  margin-bottom: 4em;
+}
+
+#boekenlijstSection > #articleDetailPage td, th {
+  border: none;
+  border-bottom-style: solid;
+  border-color: #dddddd;
+  border-width: 2px;
+  text-align: left;
+  padding: 8px;
 }

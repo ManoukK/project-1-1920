@@ -13,8 +13,8 @@ export function navNode() {
     const htmlNavigation = `
         <fieldset>
             <p>Wat goed! Wat is jouw onderwerp?</p>
-            <input type="text" placeholder="Waar ben je naar op" value="" id="searchbar">
-            <button type="submit" id="searchbarSubmit">Zoek</button>
+            <input type="text" placeholder="Vul hier jouw onderwerp in" value="" id="searchbar">
+            <button type="submit" id="searchbarSubmit"></button>
         </fieldset>
     `;
 
@@ -25,13 +25,17 @@ export function navNode() {
 export function mainNode(results) {
     const htmlQuestion = `
         <fieldset id="questionBlock">
+            <img src="/img/plakband.png" alt="plakband">
+            <img src="/img/plakband.png" alt="plakband">
             <h3>Wat wil je weten over jouw onderwerp?</h3>
             <p>Vragen voor jouw werkstuk zijn belangrijk. Dit zorgt ervoor dat jij tijdens het schrijven weet waar jij het over wilt hebben.
             Zo kan jij een goed verhaal vertellen over jouw onderwerp.</p>
             <p>Welke vragen wil jij beantwoorden over jouw onderwerp? Stel ze hieronder en bewaar jouw vragen goed!
             Schrijf ze op een blaadje of plak ze in jouw word document.</p>
-            <input type="text" placeholder="Wat wil je weten over jouw onderwerp?" value="" id="questionbar">
-            <button type="submit" id="questionSubmit">Zoek</button>
+            <div>
+                <input type="text" placeholder="Wat wil je weten over jouw onderwerp?" value="" id="questionbar">
+                <button type="submit" id="questionSubmit"></button>
+            </div>
         </fieldset>
     `;
     const main = document.getElementById('aksQuestion');
@@ -60,7 +64,10 @@ export function mainNode(results) {
         const htmlMainPage = `
                 <article id="articleMainPage${index}">
                     <div>
-                    <button type="button" class="test" >Delete</button>
+                    <div>
+                        <button type="button" class="test"></button>
+                        <label>Verwijder</label>
+                    </div>
                     <h2>${result.titles[0]}</h2>  
                     <img src="${result.coverimages ? result.coverimages[1] : 'Geen foto'}">
                     <p>${result.summaries ? result.summaries[0] : 'Geen samenvatting'}</p>
@@ -164,8 +171,16 @@ export function detailNode(results) {
             `;
         const main = document.getElementById('boekenlijstSection');
         while (main.firstChild) main.removeChild(main.firstChild);
+
         const sourceList = document.getElementById('bronnenlijstSection');
         while (sourceList.firstChild) sourceList.removeChild(sourceList.firstChild);
+
+        const siteExplain = document.getElementById('siteExplain');
+        while (siteExplain.firstChild) siteExplain.removeChild(siteExplain.firstChild);
+
+        const vragenlijstSection = document.getElementById('vragenlijstSection');
+        while (vragenlijstSection.firstChild) vragenlijstSection.removeChild(vragenlijstSection.firstChild);
+
         main.insertAdjacentHTML('beforeend', htmlDetailPage);
     });
 };
