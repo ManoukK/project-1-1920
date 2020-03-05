@@ -2,8 +2,10 @@
 mainTitleNode();
 function mainTitleNode() {
     const htmlMainTitle = `
-
         <h1>Een werkstuk over ${localStorage.getItem("searchValue") ? localStorage.getItem("searchValue") : '...'}</h1>
+        <p>EHBW - Eerste Hulp Bij Werkstukken</p>
+        <p>Al onderzoek gedaan naar jouw onderwer maak dan <a href="https://nlvo.github.io/project-1-1920/dist/#werkstuk">hier</a> jouw werkstuk</p>
+
     `;
     const main = document.querySelector('header');
     main.insertAdjacentHTML('afterbegin', htmlMainTitle);
@@ -28,17 +30,19 @@ export function navNode() {
 export function exampleTopics() {
     const htmlNavigation = `
             <p>Wat goed! Wat is jouw onderwerp?</p>
-            <button type="submit" id="searchbarSubmit" value="ruimtevaart">Ruimtevaart</button>
-            <button type="submit" id="searchbarSubmit" value="achtbanen">Achtbanen</button>
-            <button type="submit" id="searchbarSubmit" value="fossielen">Fossielen</button>
-            <button type="submit" id="searchbarSubmit" value="koraalrif">Koraalrif</button>
-            <button type="submit" id="searchbarSubmit" value="zintuigen">Zintuigen</button>
-            <button type="submit" id="searchbarSubmit" value="allergie">Allergie</button>
-            <button type="submit" id="searchbarSubmit" value="ambulance">Ambulance</button>
-            <button type="submit" id="searchbarSubmit" value="gezonde voeding">Gezonde voeding</button>
-            <button type="submit" id="searchbarSubmit" value="Kastelen">Kastelen</button>
-            <button type="submit" id="searchbarSubmit" value="vikingen">Vikingen</button>
-            <button type="submit" id="searchbarSubmit" value="ramadan">Ramadan</button>
+            <div>
+                <button type="submit" value="ruimtevaart" id="ruimtevaart">Ruimtevaart</button>
+                <button type="submit" value="achtbanen" id="achtbanen">Achtbanen</button>
+                <button type="submit" value="fossielen" id="fossielen">Fossielen</button>
+                <button type="submit" value="koraalrif" id="koraalrif">Koraalrif</button>
+                <button type="submit" value="zintuigen" id="zintuigen">Zintuigen</button>
+                <button type="submit" value="allergie" id="allergie">Allergie</button>
+                <button type="submit" value="ambulance" id="ambulance">Ambulance</button>
+                <button type="submit" value="middeleeuwen" id="middeleeuwen">Middeleeuwen</button>
+                <button type="submit" value="kastelen" id="kastelen">Kastelen</button>
+                <button type="submit" value="vikingen" id="vikingen">Vikingen</button>
+                <button type="submit" value="ramadan" id="ramadan">Ramadan</button>
+            </div>
     `;
 
     const main = document.getElementById('topics');
@@ -51,8 +55,8 @@ export function exampleTopics() {
 export function mainNode(results) {
     const htmlQuestion = `
         <fieldset id="questionBlock">
-            <img src="../../img/plakband.png" alt="plakband">
-            <img src="../../img/plakband.png" alt="plakband">
+            <img src="../img/plakband.png" alt="plakband">
+            <img src="../img/plakband.png" alt="plakband">
             <h3>Wat wil je weten over jouw onderwerp?</h3>
             <p>Vragen voor jouw werkstuk zijn belangrijk. Dit zorgt ervoor dat jij tijdens het schrijven weet waar jij het over wilt hebben.
             Zo kan jij een goed verhaal vertellen over jouw onderwerp.</p>
@@ -74,7 +78,7 @@ export function mainNode(results) {
         localStorage.setItem("questionValue", questionValue);
         const htmlQuestionAsked = `
             <ul>
-                <li>${localStorage.getItem("questionValue") ? localStorage.getItem("questionValue") : '...'}</li>
+                <li id="ulElement">${localStorage.getItem("questionValue") ? localStorage.getItem("questionValue") : '...'}</li>
             </ul>
         `;
         const questionField = document.getElementById('questionBlock');
@@ -109,6 +113,7 @@ export function mainNode(results) {
     });
 
     const section = document.querySelectorAll('div');
+
     for (let i = 0; i < section.length; i++) {
         section[i].addEventListener("click", function(results, index) {
             const element = document.querySelector('article');
@@ -119,6 +124,12 @@ export function mainNode(results) {
 
     const htmlSourceList = `
         <h3>De bronnenlijst voor in jouw werkstuk</h3>
+        <img src="../img/punaise.png" alt="punaise">
+        <p>Voor een werkstuk is een bronnenlijst heel belangrijk! Zo kan jouw juf of meester zien waar jij alle informatie hebt gevonden
+        Het is handig om vanaf het begin al op te schrijven welke bronnen jij hebt gebruikt. Zo voorkom je dat je later alles moet terug vinden. 
+        <br><br> Hieronder vind je alle boeken die de oba voor jou heeft geselecteerd. Print de website uit en kruis de boeken af die jij hebt gebruikt. Deze bronnen kan je 
+        later toevoegen aan jouw werkstuk.
+        </p>
         <table id="bronnenlijst">
             <tr>
                 <th>Gebruikte boeken</th>

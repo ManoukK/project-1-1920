@@ -303,7 +303,6 @@ button:hover {
   background-image: url(../img/brush_orange.svg);
 }
 
-
 table {
   border-collapse: collapse;
   width: 90%;
@@ -405,8 +404,157 @@ td, th {
   margin-top: -6.5em;
 }
 
-#topics > button {
+#topics div {
+  max-width: 40em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#topics button {
   position: relative;
   background-image: none;
+  width: 10em;
+  height: 13em;
+  background-image: url(../img/balloonpink.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  margin-top: 1em;
+}
+
+#topics button:nth-of-type(1) {
+  background-image: url(../img/balloonpink.png);
+}
+
+#topics button:nth-of-type(2) {
+  background-image: url(../img/balloonpurple.png);
+}
+
+#topics button:nth-of-type(3) {
+  background-image: url(../img/balloonblue.png);
+}
+
+#topics button:nth-of-type(4) {
+  background-image: url(../img/balloonorange.png);
+}
+
+#topics button:nth-of-type(5) {
+  background-image: url(../img/balloonblue.png);
+}
+
+#topics button:nth-of-type(6) {
+  background-image: url(../img/balloonorange.png);
+}
+
+#topics button:nth-of-type(7) {
+  background-image: url(../img/balloonpink.png);
+}
+
+#topics button:nth-of-type(8) {
+  background-image: url(../img/balloonpurple.png);
+}
+
+#topics button:nth-of-type(9) {
+  background-image: url(../img/balloonpink.png);
+}
+
+#topics button:nth-of-type(10) {
+  background-image: url(../img/balloonblue.png);
+}
+
+#topics button:nth-of-type(11) {
+  background-image: url(../img/balloonorange.png);
+}
+
+#topics button:hover {
+  background-image: url(../img/balloonyellow.png);
+}
+
+#questionBlock > ul {
+  margin-left: 2.5em;
+}
+
+#siteExplain > p:first-of-type {
+  text-align: center;
+  font-size: 0.8em;
+}
+
+#siteExplain > p:nth-of-type(2) {
+  text-align: center;
+  font-size: 1em;
+}
+
+#siteExplain > p:nth-of-type(2) > a {
+  background: linear-gradient(to right, var(--white) 50%, var(--yellow) 50%);
+  background-size: 200% 100%;
+  background-position:left bottom;
+  transition:all 2s ease;
+
+  position: relative;
+  text-align: center;
+  margin: 1em auto;
+  width: 80%;
+
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+}
+#siteExplain > p:nth-of-type(2) > a:before {
+  background-color: var(--yellow);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -4px;
+  left: 0;
+  transform: scaleX(1);
+}
+
+#siteExplain > p:nth-of-type(2) > a:hover {
+  background-color: var(--yellow);
+  background-position:right bottom;
+}
+
+#bronnenlijstSection > img {
+  position: absolute;
+  width: 5em;
+  margin: -1em 35% 0em 45%;
+  z-index: 2;
+
+}
+
+#bronnenlijstSection > p {
+  width: 40%;
+  display: block;
+  margin: 5em auto 3em auto;
   background-color: var(--purple);
+  padding: 4em;
+  box-shadow: 10px 10px 10px var(--shadowGrey);
+  transform: rotate(4deg);
+}
+
+
+
+@media print {
+  #siteExplain > form {
+    display: none;
+  }
+
+  #siteExplain > p:nth-of-type(2) {
+    display: none;
+  }
+
+  #vragenlijstSection {
+    page-break-before: always;
+  } 
+
+  #boekenlijstSection > article div > span {
+    display: none;
+  }
+  #boekenlijstSection > article a {
+    display: none;
+  }
+
 }

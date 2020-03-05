@@ -20,6 +20,66 @@ document.getElementById('yes').addEventListener("click", function(){
 
 document.getElementById('no').addEventListener("click", function(){
     exampleTopics();
+
+    document.getElementById('ruimtevaart').addEventListener("click", function(){
+        const searchValue = document.getElementById('ruimtevaart').value;
+        console.log(searchValue)
+        localStorage.setItem("searchValue", searchValue);
+    });
+
+    document.getElementById('achtbanen').addEventListener("click", function(){
+        const searchValue = document.getElementById('achtbanen').value;
+        console.log(searchValue)
+        localStorage.setItem("searchValue", searchValue);
+    });
+
+    document.getElementById('fossielen').addEventListener("click", function(){
+        const searchValue = document.getElementById('fossielen').value;
+        console.log(searchValue)
+        localStorage.setItem("searchValue", searchValue);
+    });
+
+    document.getElementById('zintuigen').addEventListener("click", function(){
+        const searchValue = document.getElementById('zintuigen').value;
+        console.log(searchValue)
+        localStorage.setItem("searchValue", searchValue);
+    });
+
+    document.getElementById('allergie').addEventListener("click", function(){
+        const searchValue = document.getElementById('allergie').value;
+        console.log(searchValue)
+        localStorage.setItem("searchValue", searchValue);
+    });
+
+    document.getElementById('ambulance').addEventListener("click", function(){
+        const searchValue = document.getElementById('ambulance').value;
+        console.log(searchValue)
+        localStorage.setItem("searchValue", searchValue);
+    });
+
+    document.getElementById('middeleeuwen').addEventListener("click", function(){
+        const searchValue = document.getElementById('middeleeuwen').value;
+        console.log(searchValue)
+        localStorage.setItem("searchValue", searchValue);
+    });
+
+    document.getElementById('kastelen').addEventListener("click", function(){
+        const searchValue = document.getElementById('kastelen').value;
+        console.log(searchValue)
+        localStorage.setItem("searchValue", searchValue);
+    });
+
+    document.getElementById('vikingen').addEventListener("click", function(){
+        const searchValue = document.getElementById('vikingen').value;
+        console.log(searchValue)
+        localStorage.setItem("searchValue", searchValue);
+    });
+
+    document.getElementById('ramadan').addEventListener("click", function(){
+        const searchValue = document.getElementById('ramadan').value;
+        console.log(searchValue)
+        localStorage.setItem("searchValue", searchValue);
+    });
 });
 
 router()
