@@ -123,9 +123,11 @@ export function mainNode(results) {
 - Bas heeft me geholpen met het leeg maken van de html als ik een detail pagina inlaad zonder css. Hij liet mij dit voorbeeld zien maar ik wilde geen innerHTML gebruiken dus ik zag het voorbeeld eronder op stack overflow. https://stackoverflow.com/questions/22593759/how-do-i-clear-inner-html
 
 ```js
+//makkelijke manier
  main.innerHTML= '';
 ```
 ```js
+//mooie manier
  while (main.firstChild) main.removeChild(main.firstChild);
 ```
 - tables maken in html https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro
