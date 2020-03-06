@@ -29,7 +29,15 @@ export function navNode() {
 
 export function exampleTopics() {
     const htmlNavigation = `
-            <p>Wat goed! Wat is jouw onderwerp?</p>
+            <p>Dat geeft niks. Een onderwerp kiezen kan ook moeilijk zijn. Hier vind je een paar vragen die jouw kunnen 
+            helpen bij het bedenken van een onderwerp. Of kies een van de onderwerpen die hier al onder staan.</p>
+            <ul>
+                <li>Wat is jouw lievelings dier?</li>
+                <li>Wat vind jij een mooi land?</li>
+                <li>Wat wil jij later worden?</li>
+                <li>Welke sport vind jij leuk om te doen?</li>
+                <li>Wat doe je graag uit school?</li>
+            </ul>
             <div>
                 <button type="submit" value="ruimtevaart" id="ruimtevaart">Ruimtevaart</button>
                 <button type="submit" value="achtbanen" id="achtbanen">Achtbanen</button>
