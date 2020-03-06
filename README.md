@@ -14,6 +14,9 @@
 * [Bronnenlijst](#Bronnenlijst)
 * [Credits](#Credits)
 * [Aanvulling op WAFS](#Aanvulling-op-WAFS)
+* [De website voor als de api niet werkt](#De-website-voor-als-de-api-niet-werkt)
+* [De detail pagina](#De-detail-pagina)
+
 
 ### De opdracht 
 Je hebt keuze uit 3 verschillende cases. Ik heb gekozen voor case 2. Dit is de case waarbij je een hulp functie gaat maken om spreekbeurden voor kinderen makkelijker te maken. Ik heb deze case gekozen omdat dit het dichtst bij mijn persoonlijke leerdoelen ligt. 
@@ -172,3 +175,10 @@ function router(){
     });
 };
 ```
+
+### De website voor als de api niet werkt
+![screencapture-manoukk-github-io-project-1-1920-2020-03-06-11_46_55](https://user-images.githubusercontent.com/45541885/76077168-7d4fa880-5fa0-11ea-916f-0ee22822778a.png)
+
+### De detail pagina
+![screencapture-manoukk-github-io-project-1-1920-2020-03-06-11_47_23](https://user-images.githubusercontent.com/45541885/76077174-82145c80-5fa0-11ea-983a-a1994da96d77.png)
+
