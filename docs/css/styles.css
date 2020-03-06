@@ -438,7 +438,7 @@ td, th {
   padding: 2em;
   width: 50%;
   display: block;
-  margin: 5em auto 7em auto;
+  margin: 3em auto 7em auto;
   box-shadow: 10px 10px 10px var(--shadowGrey);
   background: linear-gradient(
     to bottom,
