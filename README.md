@@ -116,11 +116,11 @@ export function mainNode(results) {
 - [x] Deleten per item en niet de bovenste item
  
 ### Bronnenlijst
-- event listener. Hoe kan je dat gebruiken. https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event en https://www.w3schools.com/jsref/met_document_addeventlistener.asp
+- event listener. Hoe kan je dat gebruiken: https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event en https://www.w3schools.com/jsref/met_document_addeventlistener.asp
 - Wouter adviseerde mij om een event listener te hebben ipv onclick. Dat is veel netter.
 - Opzet code van Joost.
 - Menno heeft me geholpen met routie (ik moest de / weghalen en ik moest de .then die ik global had staan in de routie function zetten.)
-- Bas heeft me geholpen met het leeg maken van de html als ik een detail pagina inlaad zonder css. Hij liet mij dit voorbeeld zien maar ik wilde geen innerHTML gebruiken dus ik zag het voorbeeld eronder op stack overflow. https://stackoverflow.com/questions/22593759/how-do-i-clear-inner-html
+- Bas heeft me geholpen met het leeg maken van de html als ik een detail pagina inlaad zonder css. Hij liet mij dit voorbeeld zien maar ik wilde geen innerHTML gebruiken dus ik zag het voorbeeld eronder op stack overflow: https://stackoverflow.com/questions/22593759/how-do-i-clear-inner-html
 
 ```js
 //makkelijke manier
@@ -130,12 +130,13 @@ export function mainNode(results) {
 //mooie manier
  while (main.firstChild) main.removeChild(main.firstChild);
 ```
-- tables maken in html https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro
+- tables maken in html: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro
 - event handler: https://developer.mozilla.org/en-US/docs/Web/API/Event/target
-- lijn animatie onder knoppen https://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+- lijn animatie onder knoppen: https://tobiasahlin.com/blog/css-trick-animating-link-underlines/
 - Kris had me geholpen met dat ik nu het artikel kan verwijderen die ik daadwerkelijk aanklik ipv de bovenste (word nu gedaan met this)
-- slide animatie http://jsfiddle.net/75Umu/3/
-- streep achtergrond https://css-tricks.com/stripes-css/
+- slide animatie: http://jsfiddle.net/75Umu/3/
+- streep achtergrond: https://css-tricks.com/stripes-css/
+- Css media print: https://css-tricks.com/css-tricks-finally-gets-a-print-stylesheet/ 
 
 ### Credits
 - Opzet code van Joost. Wel naar mijn eigen hand omgezet.
