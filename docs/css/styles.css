@@ -432,12 +432,37 @@ td, th {
   background-color: var(--white);
 }
 
+#hulpvragen {
+  position: relative;
+  background-color: #F8F8F8;
+  padding: 2em;
+  width: 50%;
+  display: block;
+  margin: 5em auto 7em auto;
+  box-shadow: 10px 10px 10px var(--shadowGrey);
+  background: linear-gradient(
+    to bottom,
+    var(--blue) 5%,
+    var(--white) 0%);
+  background-size: 100% 20px;
+}
+
+#hulpvragen > img {
+  position: absolute;
+  width: 5em;
+  /* margin: -5em 30% 0em 50%; */
+  margin-top: -5em;
+  margin-left: -2em;
+  transform: scaleX(-1);
+}
+
+
 #topics p {
   display: block;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  /* width: 50%; */
   margin-bottom: 3em;
 }
 
@@ -446,8 +471,10 @@ td, th {
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  /* width: 50%; */
 }
+
+
 
 #topics button:nth-of-type(1) {
   background-image: url(../img/balloonpink.png);
