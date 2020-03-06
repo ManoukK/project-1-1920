@@ -117,7 +117,9 @@ export function mainNode(results) {
 - [ ] Als een gebruiker van de detail weer naar de hoofdpagina gaat moeten de gedelete items weg blijven
 - [x] Print optie voor de website
 - [x] Deleten per item en niet de bovenste item
- 
+- [ ] Bronnenlijst responsive op de boekenlijst
+- [ ] In de api filteren op non-fictie boeken
+  
 ### Bronnenlijst
 - event listener. Hoe kan je dat gebruiken: https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event en https://www.w3schools.com/jsref/met_document_addeventlistener.asp
 - Wouter adviseerde mij om een event listener te hebben ipv onclick. Dat is veel netter.
