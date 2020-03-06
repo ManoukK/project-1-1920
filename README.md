@@ -21,12 +21,16 @@ Je hebt keuze uit 3 verschillende cases. Ik heb gekozen voor case 2. Dit is de c
 Mijn eigen leerdoelen zijn namelijk dat ik wil leren hoe een gebruiker in een array van data kan zoeken, filteren en sorteren. Ik heb dit nog nooit gedaan en het lijkt mij interessant om dit te onderzoeken. 
 
 ### Mijn concept
-Mijn concept ligt erg dicht bij mijn leerdoel. Ik wil een site maken waarbij de gebruiker kan zoeken, filteren en sorteren. De doelgroep van de case zijn kinderen en dus moet ik rekening houden met een leuke, speelse site/vormgeving zodat het ook kinderen aanspreekt. 
+Mijn eerste concept was dat ik een site ging maken waarbij de gebruiker kan zoeken, filteren en sorteren. De doelgroep is kinderen (groep 6 tot en met 8) 
 
-Eerst wil ik ervoor zorgen dat je kan zoeken, filteren en sorteren binnen een bepaalde thema. Als dit werkt wil ik nog uitbereiden dat de gebruiker zelf in de hele oba data kan zoeken naar kernwoorden. 
+Na mijn feedback ronde op woensdag kreeg ik als feedback dat ik me meer moest focussen op een site die kinderen helpt bij het maken van werkstukken. Ik had mijn concept om gegooit en nu is dit mijn concept geworden: 
+
+Deze website helpt kinderen bij werkstukken maken en dan vooral het opzetten van een werkstuk. Dnek bijvoorbeeld aan het bedenken van een onderwerp, vragen bedenken en bronnen zoeken. Stap voor stap word er uitgelegd wat diegene moet doen en zo creëert hij/zij een goede basis zodat het daadwerkelijk maken van een werkstuk soepeler gaat. 
+
+Ik heb nu wel een zoek fucntie gemaakt maar filteren en sorteren kan (nog) niet op deze website. Wel heb ik nu dat de gebruiker boeken kan verwijderen uit de lijst.
 
 #### De hoofdpagina (tot nu toe)
-> screenshot website
+![Schermafbeelding 2020-03-06 om 09 43 59](https://user-images.githubusercontent.com/45541885/76067079-0fe74c00-5f8f-11ea-80e0-161e78a495db.png)
 
 ### Installatie
 Om Dit project te installeren kan je deze repository downloaden of forken bovenaan de website. Verder heb je nog wel de api nodig van de oba (lees: De api en data) en moet je nog routie installeren. Zie hieronder.
@@ -108,12 +112,34 @@ export function mainNode(results) {
 - [ ] Sorteer functie
 - [x] Speelse, leuke uitstaring
 - [ ] Als een gebruiker van de detail weer naar de hoofdpagina gaat moeten de gedelete items weg blijven
-- [ ] Print optie voor de website
-- [ ] Deleten per item en niet de bovenste item
+- [x] Print optie voor de website
+- [x] Deleten per item en niet de bovenste item
  
 ### Bronnenlijst
+- event listener. Hoe kan je dat gebruiken. https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event en https://www.w3schools.com/jsref/met_document_addeventlistener.asp
+- Wouter adviseerde mij om een event listener te hebben ipv onclick. Dat is veel netter.
+- Opzet code van Joost.
+- Menno heeft me geholpen met routie (ik moest de / weghalen en ik moest de .then die ik global had staan in de routie function zetten.)
+- Bas heeft me geholpen met het leeg maken van de html als ik een detail pagina inlaad zonder css. Hij liet mij dit voorbeeld zien maar ik wilde geen innerHTML gebruiken dus ik zag het voorbeeld eronder op stack overflow. https://stackoverflow.com/questions/22593759/how-do-i-clear-inner-html
+
+```js
+ main.innerHTML= '';
+```
+```js
+ while (main.firstChild) main.removeChild(main.firstChild);
+```
+- tables maken in html https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro
+- event handler: https://developer.mozilla.org/en-US/docs/Web/API/Event/target
+- lijn animatie onder knoppen https://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+- Kris had me geholpen met dat ik nu het artikel kan verwijderen die ik daadwerkelijk aanklik ipv de bovenste (word nu gedaan met this)
+- slide animatie http://jsfiddle.net/75Umu/3/
+- streep achtergrond https://css-tricks.com/stripes-css/
 
 ### Credits
+- Opzet code van Joost. Wel naar mijn eigen hand omgezet.
+- Menno heeft mij geholpen met een Routie probleem.
+- Bas heeft mij geholpen met het leeg maken van sections zodra er wat ingeladen word. 
+- Kris heeft mij geholpen bij het verwijderen van het artikel die ik daadwerkelijk aanklik. 
 
 ### Aanvulling op WAFS
 Voor wafs had ik nog een kleine aanvulling en dat ging over de routie. Deze had ik toen niet dynamisch aangemaakt, dat kon ook omdat ik maar 3 verschillende articles had. Nu moet ik het wel dynamisch aanmaken omdat mijn hele content dynamisch is. Dat heb ik gedaan op deze manier: 
