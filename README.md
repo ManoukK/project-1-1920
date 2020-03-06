@@ -137,12 +137,14 @@ export function mainNode(results) {
 - slide animatie: http://jsfiddle.net/75Umu/3/
 - streep achtergrond: https://css-tricks.com/stripes-css/
 - Css media print: https://css-tricks.com/css-tricks-finally-gets-a-print-stylesheet/ 
+- Welke stappen moet je nemen om een werkstuk te maken: http://www.ikleerinbeelden.nl/op-school/beelddenken-basisschool/hoe-maak-je-een-werkstuk/
 
 ### Credits
 - Opzet code van Joost. Wel naar mijn eigen hand omgezet.
 - Menno heeft mij geholpen met een Routie probleem.
 - Bas heeft mij geholpen met het leeg maken van sections zodra er wat ingeladen word. 
 - Kris heeft mij geholpen bij het verwijderen van het artikel die ik daadwerkelijk aanklik. 
+- Deze site die uitlegde hoe je stap voor stap een werkstuk kan maken: http://www.ikleerinbeelden.nl/op-school/beelddenken-basisschool/hoe-maak-je-een-werkstuk/
 
 ### Aanvulling op WAFS
 Voor wafs had ik nog een kleine aanvulling en dat ging over de routie. Deze had ik toen niet dynamisch aangemaakt, dat kon ook omdat ik maar 3 verschillende articles had. Nu moet ik het wel dynamisch aanmaken omdat mijn hele content dynamisch is. Dat heb ik gedaan op deze manier: 
